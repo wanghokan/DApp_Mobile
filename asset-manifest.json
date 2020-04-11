@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/DApp_Mobile/static/css/main.d067e633.chunk.css",
+    "main.js": "/DApp_Mobile/static/js/main.b23c358d.chunk.js",
+    "main.js.map": "/DApp_Mobile/static/js/main.b23c358d.chunk.js.map",
+    "runtime-main.js": "/DApp_Mobile/static/js/runtime-main.ad2abd37.js",
+    "runtime-main.js.map": "/DApp_Mobile/static/js/runtime-main.ad2abd37.js.map",
+    "static/css/2.ad8fe80d.chunk.css": "/DApp_Mobile/static/css/2.ad8fe80d.chunk.css",
+    "static/js/2.98b7e022.chunk.js": "/DApp_Mobile/static/js/2.98b7e022.chunk.js",
+    "static/js/2.98b7e022.chunk.js.map": "/DApp_Mobile/static/js/2.98b7e022.chunk.js.map",
+    "index.html": "/DApp_Mobile/index.html",
+    "precache-manifest.9aba6833caf17053fb9407be97a17b78.js": "/DApp_Mobile/precache-manifest.9aba6833caf17053fb9407be97a17b78.js",
+    "service-worker.js": "/DApp_Mobile/service-worker.js",
+    "static/css/2.ad8fe80d.chunk.css.map": "/DApp_Mobile/static/css/2.ad8fe80d.chunk.css.map",
+    "static/css/main.d067e633.chunk.css.map": "/DApp_Mobile/static/css/main.d067e633.chunk.css.map",
+    "static/js/2.98b7e022.chunk.js.LICENSE.txt": "/DApp_Mobile/static/js/2.98b7e022.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad2abd37.js",
+    "static/css/2.ad8fe80d.chunk.css",
+    "static/js/2.98b7e022.chunk.js",
+    "static/css/main.d067e633.chunk.css",
+    "static/js/main.b23c358d.chunk.js"
+  ]
+}
