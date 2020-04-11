@@ -24,28 +24,28 @@ class SelectActivity extends Component {
                 <span style={{ fontSize: 18 }}>表單編號: </span>
                 <input disabled={true} value={10000000 * this.state.termIndex + 100000 * this.state.classIndex + 1000 * this.state.taskIndex + 1 * this.state.locationIndex}></input>
                 <p></p>
-                <span style={{ fontSize: 18 }}>工程大項: </span>
+                <span style={{ fontSize: 18 }}>工程類別: </span>
                 <select style={{ width: 200 }} onChange={e => this.setState({ termIndex: e.target.value, classIndex: 0, taskIndex: 0, locationIndex: 0 })}>
                     {this.state.term.map((n, index) => (
                         <option key={n} value={index}>{n}</option>
                     ))}
                 </select>
                 <p></p>
-                <span style={{ fontSize: 18 }}>工程類別: </span>
+                <span style={{ fontSize: 18 }}>工程項目: </span>
                 <select style={{ width: 200 }} onChange={e => this.setState({ classIndex: e.target.value, taskIndex: 0, locationIndex: 0 })}>
                     {this.state.class[this.state.term[this.state.termIndex]].map((n, index) => (
                         <option key={n} value={index}>{n}</option>
                     ))}
                 </select>
                 <p></p>
-                <span style={{ fontSize: 18 }}>項目名稱: </span>
+                <span style={{ fontSize: 18 }}>細部工項: </span>
                 <select style={{ width: 200 }} onChange={e => this.setState({ taskIndex: e.target.value, locationIndex: 0 })}>
                     {this.state.task[this.state.class[this.state.term[this.state.termIndex]][this.state.classIndex]].map((n, index) => (
                         <option key={n} value={index}>{n}</option>
                     ))}
                 </select>
                 <p></p>
-                <span style={{ fontSize: 18 }}>項目名稱: </span>
+                <span style={{ fontSize: 18 }}>施工位置: </span>
                 <select style={{ width: 200 }} onChange={e => this.setState({ locationIndex: e.target.value })}>
                     {this.state.location[this.state.task[this.state.class[this.state.term[this.state.termIndex]][this.state.classIndex]][this.state.taskIndex]].map((n, index) => (
                         <option key={n} value={index}>{n}</option>
