@@ -109,17 +109,16 @@ class Inspect extends Component {
         return (
             <div align="center">
                 <p></p>
-                <table border="1" style={{ width: "95%" }}>
+                <table border="1" style={{ width: "100%" }}>
                     {this.props.inspectItems.map((n, index) => (
                         <tbody key={index}>
                             <tr>
-                                <td rowSpan="2" style={{ width: "10%" }}>#{index + 1}</td>
-                                <td colSpan="3" style={{ fontSize: 18 }}>{n}</td>
+                                <td rowSpan="3" /*style={{ width: "10%" }}*/>#{index + 1}</td>
+                                <td colSpan="2" style={{ fontSize: 18 }}>{n}</td>
                             </tr>
                             <tr>
-                                <td style={{ width: "27%" }}>
+                                <td /*style={{ width: "27%" }}*/>
                                     <span style={{ fontSize: 12 }}>查驗結果: </span>
-                                    <p style={{ fontSize: 8 }}></p>
                                     <select id={index} onChange={this.inspectResult} defaultValue={this.props.itemsState[index]}>
                                         <option value={0}>空白</option>
                                         <option value={1}>合格</option>
@@ -128,19 +127,19 @@ class Inspect extends Component {
                                         <option value={4}>無此查驗項目</option>
                                     </select>
                                 </td>
-                                <td style={{ width: "27%" }}>
-                                    <span style={{ fontSize: 12 }}>備註: </span>
-                                    <p style={{ fontSize: 8 }}></p>
-                                    <input id={index} onChange={this.inspectNote}></input>
-                                </td>
-                                <td style={{ width: "36%" }}>
+                                <td /*style={{ width: "36%" }}*/>
                                     <span style={{ fontSize: 12 }}>查驗照片: </span>
-                                    <p style={{ fontSize: 8 }}></p>
-                                    <input id={index} type="file" accept="image/*" capture="camera" style={{ width: "80%" }} onChange={this.photoCapture}></input>
+                                    <input id={index} type="file" accept="image/*" capture="camera" style={{ width: "50%" }} onChange={this.photoCapture}></input>
                                     {(this.state.photos[index] == "")
                                         ? <button id={index} onClick={this.photoUpload}>↑</button>
                                         : <span>已上傳</span>
                                     }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td /*style={{ width: "27%" }}*/ colSpan="2">
+                                    <span style={{ fontSize: 12 }}>備註: </span>
+                                    <input id={index} onChange={this.inspectNote} style={{ width: "80%" }}></input>
                                 </td>
                             </tr>
                         </tbody>
