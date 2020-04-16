@@ -17,6 +17,7 @@ class App extends Component {
     this.state = {
       step: 0,
       account: null,
+      company: null,
       contract: null,
       projects: [],
       projectIndex: -1,
@@ -60,15 +61,111 @@ class App extends Component {
     const networksId = await window.web3.eth.net.getId()
     const networkData = Contract.networks[networksId]
     if (networkData) {
-      const contract = new window.web3.eth.Contract(Contract.abi, networkData.address)
-      this.setState({ contract })
-      const projects = []
-      const projectsNum = await contract.methods.projectIndex().call()
-      for (let i = 0; i < projectsNum; i++) {
-        let prj = await contract.methods.projects(i).call()
-        projects.push(prj)
+      const authorityAbi = [
+        {
+          "constant": false,
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_userAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            }
+          ],
+          "name": "newUser",
+          "outputs": [],
+          "payable": false,
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "constant": true,
+          "inputs": [],
+          "name": "userCount",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "constant": true,
+          "inputs": [
+            {
+              "internalType": "int256",
+              "name": "_id",
+              "type": "int256"
+            }
+          ],
+          "name": "userInfo",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "_name",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "_contractAddress",
+              "type": "address"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "constant": true,
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "name": "userNum",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "",
+              "type": "int256"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "view",
+          "type": "function"
+        }
+      ]
+      const authority = new window.web3.eth.Contract(authorityAbi, "0xAa06a813Ec3343fEFd40568b2f5E59C486b535cC")
+      const userNum = await authority.methods.userNum(this.state.account).call()
+      if (userNum != 0) {
+        const userInfo = await authority.methods.userInfo(userNum).call()
+        console.log(userInfo)
+        this.setState({ company: userInfo._name })
+        const contractAddress = userInfo._contractAddress
+        const contract = new window.web3.eth.Contract(Contract.abi, contractAddress)
+        this.setState({ contract })
+        const projects = []
+        const projectsNum = await contract.methods.projectIndex().call()
+        for (let i = 0; i < projectsNum; i++) {
+          let prj = await contract.methods.projects(i).call()
+          projects.push(prj)
+        }
+        this.setState({ projects })
       }
-      this.setState({ projects })
+      else{
+        alert("無使用權限")
+      }
+
     } else {
       window.alert('AutonomousInspectIon contract not deployed to detected network.')
     }
@@ -143,7 +240,8 @@ class App extends Component {
         <div>
           <Navbar
             step={this.state.step}
-            account={this.state.account} />
+            account={this.state.account}
+            company={this.state.company} />
           <p></p>
           <section className="App">
             <span style={{ fontSize: 18 }}>請選擇專案: </span>
@@ -165,6 +263,7 @@ class App extends Component {
           <Navbar
             step={this.state.step}
             account={this.state.account}
+            company={this.state.company}
             project={this.state.projectName} />
           <p></p>
           <section className="App">
@@ -181,6 +280,7 @@ class App extends Component {
           <Navbar
             step={this.state.step}
             account={this.state.account}
+            company={this.state.company}
             project={this.state.projectName}
             executeIndex={this.state.executeIndex}
             inspectActivity={this.state.inspectActivity}
