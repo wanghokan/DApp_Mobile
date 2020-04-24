@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1dc3fe23ac28407dc479e7cf5519aea",
+    "revision": "e5aee2c54ee6dddac4ad6f3f20bc5011",
     "url": "/DApp_Mobile/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DApp_Mobile/static/css/2.ad8fe80d.chunk.css"
   },
   {
-    "revision": "5715b3734c52ef02acaf",
+    "revision": "35c77b77f8575f7381d3",
     "url": "/DApp_Mobile/static/css/main.d067e633.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DApp_Mobile/static/js/2.98b7e022.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5715b3734c52ef02acaf",
-    "url": "/DApp_Mobile/static/js/main.88a8302f.chunk.js"
+    "revision": "35c77b77f8575f7381d3",
+    "url": "/DApp_Mobile/static/js/main.a34c418e.chunk.js"
   },
   {
     "revision": "a89423e5b04c14bbddfb",
