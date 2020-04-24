@@ -145,7 +145,7 @@ class App extends Component {
           "type": "function"
         }
       ]
-      const authority = new window.web3.eth.Contract(authorityAbi, "0xAa06a813Ec3343fEFd40568b2f5E59C486b535cC")
+      const authority = new window.web3.eth.Contract(authorityAbi, "0xcdb5471f50b3febd1bc24bcbfc3e66be9c9e9497")
       const userNum = await authority.methods.userNum(this.state.account).call()
       if (userNum != 0) {
         const userInfo = await authority.methods.userInfo(userNum).call()
