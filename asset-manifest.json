@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DApp_Mobile/static/css/main.d067e633.chunk.css",
-    "main.js": "/DApp_Mobile/static/js/main.a34c418e.chunk.js",
-    "main.js.map": "/DApp_Mobile/static/js/main.a34c418e.chunk.js.map",
+    "main.js": "/DApp_Mobile/static/js/main.2d293294.chunk.js",
+    "main.js.map": "/DApp_Mobile/static/js/main.2d293294.chunk.js.map",
     "runtime-main.js": "/DApp_Mobile/static/js/runtime-main.ad2abd37.js",
     "runtime-main.js.map": "/DApp_Mobile/static/js/runtime-main.ad2abd37.js.map",
     "static/css/2.ad8fe80d.chunk.css": "/DApp_Mobile/static/css/2.ad8fe80d.chunk.css",
     "static/js/2.98b7e022.chunk.js": "/DApp_Mobile/static/js/2.98b7e022.chunk.js",
     "static/js/2.98b7e022.chunk.js.map": "/DApp_Mobile/static/js/2.98b7e022.chunk.js.map",
     "index.html": "/DApp_Mobile/index.html",
-    "precache-manifest.70acf9037e99d82c6d6cfc20609d23e8.js": "/DApp_Mobile/precache-manifest.70acf9037e99d82c6d6cfc20609d23e8.js",
+    "precache-manifest.f46e7845a6c6094c747eedcdf75cfc3d.js": "/DApp_Mobile/precache-manifest.f46e7845a6c6094c747eedcdf75cfc3d.js",
     "service-worker.js": "/DApp_Mobile/service-worker.js",
     "static/css/2.ad8fe80d.chunk.css.map": "/DApp_Mobile/static/css/2.ad8fe80d.chunk.css.map",
     "static/css/main.d067e633.chunk.css.map": "/DApp_Mobile/static/css/main.d067e633.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.ad8fe80d.chunk.css",
     "static/js/2.98b7e022.chunk.js",
     "static/css/main.d067e633.chunk.css",
-    "static/js/main.a34c418e.chunk.js"
+    "static/js/main.2d293294.chunk.js"
   ]
 }
