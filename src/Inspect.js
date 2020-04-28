@@ -129,7 +129,7 @@ class Inspect extends Component {
                                 </td>
                                 <td /*style={{ width: "36%" }}*/>
                                     <span style={{ fontSize: 12 }}>查驗照片: </span>
-                                    <input id={index} type="file" accept="image/*" capture="camera" style={{ width: "50%" }} onChange={this.photoCapture}></input>
+                                    <input id={index} type="file" accept="image/*" capture="camera" style={{ width: "80%" }} onChange={this.photoCapture}></input>
                                     {(this.state.photos[index] == "")
                                         ? <button id={index} onClick={this.photoUpload}>↑</button>
                                         : <span>已上傳</span>
